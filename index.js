@@ -40,7 +40,7 @@ servidor.get('/filmes/:posicao', (req, res)=>{
     // 1: Salvar o trecho buscado na variável 'trecho';
     
     // 2: Importar o conteúdo de filmes.json para uma constante 'filmes'
-    const filmes = require('./')
+
     // 3: Filtrar do array filmes, somente os filmes que possuam o trecho no titulo
 
     //    (lembrem da função filmes.filter)
