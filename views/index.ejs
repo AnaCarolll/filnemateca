@@ -23,15 +23,22 @@
         </div>
     </header>
     <main class="container">
-      <% for(filme of filmes)%>
-        <article>
-            <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
-            <a href="">
-                <span class="titulo">Encanto</span>
-                <span class="duracao">Duração: 110min</span>
+        <%
+        for (let i=0;i<filmes.length ; i++ ){
+          let f = filmes[i];
+            %> 
+            <article>
+            <img src="/img/<%= f.cartaz %>" alt="<%= f.titulo %> ">
+            <a href=" /filmes/<%= i %>">
+                <span class="titulo"><%= f.titulo%></span>
+                <span class="duracao">Censura: <%= f.censura%></span>
             </a>
         </article>
-        <% for(filme of filmes)%>
+        <%} %>
+    
+       
+       <!--
+        
         <article>
             <img src="/img/03ea8156766457e7.jpg" alt="Encanto">
             <a href="">
