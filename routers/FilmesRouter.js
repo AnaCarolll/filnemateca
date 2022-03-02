@@ -30,7 +30,7 @@ router.get('/filmes/:posicao',FilmesController.funcaoPosicao)
 
 
 //funcao buscar por trecho
-router.get('/busca/:trecho',FilmesController.buscarPorTrecho)
+router.get('/busca',FilmesController.buscarPorTrecho)
 
 
 

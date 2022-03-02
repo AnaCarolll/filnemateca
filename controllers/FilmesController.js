@@ -43,7 +43,7 @@ funcaoPosicao: (req, res) => {
 
 buscarPorTrecho : (req, res) => {
     // 1: Salvar o trecho buscado na variável 'trecho';
-    let trecho = req.params.trecho;
+    let trecho = req.query.busca;
     
 
     // 2: Importar onteúdo de filmes.json para uma constante 'filmes'
@@ -60,11 +60,9 @@ buscarPorTrecho : (req, res) => {
 
 
     // 4: Enviar para o cliente(usando res.send) o resultado da filtragem.
-    res.send(resultadoDaBusca)},
-
-buscarId:(req, res) =>{
-
-}
+    res.render('index.ejs',{filmes: resultadoDaBusca});
+},
+buscarId:(req, res) =>{}
 }
 
 
