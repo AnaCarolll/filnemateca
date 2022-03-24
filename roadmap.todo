@@ -1,4 +1,18 @@
 Instruções Gerais:
+    ☐ Adequar o index.ejs
+    ☐ Readequar a rota get
+    router.get('/filmes/:posicao', FilmesController.buscaPorPosicao)
+    ☐ Codar o controller buscaPorId.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     ✔ Crie uma pasta chamada services @done(21-12-09 17:17)
     ✔ Crie um arquivo FilmesServices.js na pasta services @done(21-12-09 17:18)
     ✔ No arquivo FilmesServices.js @done(21-12-09 17:33)

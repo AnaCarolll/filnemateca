@@ -1,7 +1,8 @@
 //importar a bibioteca  express
 const express = require("express");
 const { funcaoGenero } = require("../controllers/FilmesController");
-
+//importar middlewares
+const middlewareGuardaBusca= require('../middleware/middlewareGuardaBusca')
 //criar o roteador com express.Router
 const router = express.Router();
 
@@ -26,11 +27,11 @@ router.get('/filme',FilmesController.listarFilmes)
 router.get('/genero', FilmesController.funcaoGenero)
 
 //funcao posicao
-router.get('/filmes/:posicao',FilmesController.funcaoPosicao)
+router.get('/filmes/:id',FilmesController.buscarId)
 
 
 //funcao buscar por trecho
-router.get('/busca',FilmesController.buscarPorTrecho)
+router.get('/busca', middlewareGuardaBusca, FilmesController.buscarPorTrecho)
 
 
 
