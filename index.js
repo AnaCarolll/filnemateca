@@ -1,6 +1,6 @@
 //importacao da bibliote Express 
 const express = require('express');
-
+const session = require('express-session')
 const path = require('path');
 const middlewareGlobal = require ('./middleware/middlewareGlobal')
 //importando os roteadores
@@ -14,6 +14,13 @@ servidor.set('view engine','ejs');
 
 //Configurando a pasta public como conedora estáticos
 servidor.use(express.static(path.join(__dirname, 'public')));
+
+//Configurando o middleware que lida com session
+servidor.use(session({secret:"SEGREDO",saveUninitialized: false, resave: true}
+));
+
+//põe as informações do formulario no req.body
+servidor.use(express.urlencoded({ extended: false }));
 
 
 
